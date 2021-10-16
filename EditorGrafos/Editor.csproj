@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6A3DD70-66BB-456A-9018-B008EED014F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EditorGrafos</RootNamespace>
+    <AssemblyName>EditorGrafos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion.Designer.cs">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafo.cs" />
+    <Compile Include="GrafoDirigido.cs" />
+    <Compile Include="GrafoNoDirigido.cs" />
+    <Compile Include="MatrizAdyacencya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatrizAdyacencya.Designer.cs">
+      <DependentUpon>MatrizAdyacencya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatrizIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatrizIncidencia.Designer.cs">
+      <DependentUpon>MatrizIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatrizPesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatrizPesos.Designer.cs">
+      <DependentUpon>MatrizPesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuestraCadena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuestraCadena.Designer.cs">
+      <DependentUpon>MuestraCadena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodoP.cs" />
+    <Compile Include="Arista.cs" />
+    <Compile Include="nPartita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nPartita.Designer.cs">
+      <DependentUpon>nPartita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pila.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propiedad.cs" />
+    <Compile Include="Propiedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propiedades.Designer.cs">
+      <DependentUpon>Propiedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Romano.cs" />
+    <EmbeddedResource Include="Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatrizAdyacencya.resx">
+      <DependentUpon>MatrizAdyacencya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatrizIncidencia.resx">
+      <DependentUpon>MatrizIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatrizPesos.resx">
+      <DependentUpon>MatrizPesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuestraCadena.resx">
+      <DependentUpon>MuestraCadena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nPartita.resx">
+      <DependentUpon>nPartita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Propiedades.resx">
+      <DependentUpon>Propiedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
